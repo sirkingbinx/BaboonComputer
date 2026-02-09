@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿﻿using System.Text;
 using BaboonComputer.Interfaces;
 using GorillaNetworking;
 using GorillaTagScripts;
@@ -34,12 +34,15 @@ public class Room : IBaboonComputerScreen
 
     private string _currentlyInputtedRoomCode = "";
 
-    public void Update()
+    // not to be confused with Update()
+    public void UpdateScreenText()
     {
         var screenBuilder = new StringBuilder();
 
         screenBuilder.AppendLine("Input a room code and press Enter to join that room. Press Option 1 to leave the current room. Press Option 2 to join a new public room.");
         screenBuilder.AppendLine($"Code: {_currentlyInputtedRoomCode}");
+
+        SetText(screenBuilder.ToString());
     }
 
     public void OnKeyPressed(ComputerKey key)
@@ -70,5 +73,7 @@ public class Room : IBaboonComputerScreen
                 _currentlyInputtedRoomCode += key.ToRealKeyName();
                 break;
         }
+
+        UpdateScreenText();
     }
 }

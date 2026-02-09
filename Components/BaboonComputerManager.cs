@@ -29,6 +29,8 @@ namespace BaboonComputer.Components
         private void Start()
         {
             Instance = this;
+
+            // go find gorillacomputer
         }
     }
 }

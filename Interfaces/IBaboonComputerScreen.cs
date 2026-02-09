@@ -12,7 +12,7 @@ public interface IBaboonComputerScreen
         BaboonComputerManager.Instance.ScreenText = text;
     }
 
-    public void Update();
+    public void Update() { }
 
     public void OnKeyPressed(ComputerKey key) { }
 }
