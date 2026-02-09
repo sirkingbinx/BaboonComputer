@@ -7,6 +7,8 @@ namespace BaboonComputer.Components
         // how CI does it (https://github.com/DecalFree/ComputerInterface/blob/main/ComputerInterface/Plugin.cs):
         // FindFirstObjectByType<GorillaComputer>().gameObject.AddComponent<BaboonComputerTransceiver>();
     
+        public GorillaComputer ComputerInstance;
+        
         public void Start()
         {
             

@@ -48,19 +48,17 @@ namespace BaboonComputer.Components
 
 		public void OnKeyPressed(ComputerKey key)
 		{
-			var letScreenProcess = (key != ComputerKey.Up) && (key != ComputerKey.Down);
-
-			if (letScreenProcess)
+			try { Screen.OnKeyPressed(key); }
+			catch (Exception ex)
 			{
-				try { Screen.OnKeyPressed(key); }
-				catch (Exception ex)
-				{
-					Debug.LogError($"Error in screen: {ex}");
-				}
-			} else
-			{
-				// next / prev screen
+				Debug.LogError($"Error in screen: {ex}");
 			}
+		}
+
+		public void OnSpecialKeyPressed(PreprocessedComputerKey key)
+		{
+			// switch the pages here (PCK is only the arrow keys)
+			return;
 		}
 
 		private void Start()

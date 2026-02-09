@@ -1,5 +1,10 @@
-﻿namespace BaboonComputer;
+﻿using System;
 
+namespace BaboonComputer;
+
+/// <summary>
+/// Represents a key on the keyboard.
+/// </summary>
 public enum ComputerKey
 {
     // Options
@@ -27,8 +32,10 @@ public enum ComputerKey
     A = 100,
     B, C, D, E, F, G, H, I, J, K, L, M, N,
     O, P, Q, R, S, T, U, V, W, X, Y, Z,
+}
 
-    // Arrow keys
-    Up = 130,
-    Down
+internal enum PreprocessedComputerKey
+{
+    UpArrow,
+    DownArrow
 }
