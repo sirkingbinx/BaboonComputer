@@ -26,5 +26,9 @@ public enum ComputerKey
     // Letters
     A = 100,
     B, C, D, E, F, G, H, I, J, K, L, M, N,
-    O, P, Q, R, S, T, U, V, W, X, Y, Z
+    O, P, Q, R, S, T, U, V, W, X, Y, Z,
+
+    // Arrow keys
+    Up = 130,
+    Down
 }
